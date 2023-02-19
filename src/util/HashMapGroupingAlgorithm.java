@@ -52,6 +52,7 @@ public class HashMapGroupingAlgorithm implements GroupingAlgorithm {
 
     @Override
     public List<String> groupSentences(List<List<String>> sentences) {
+        System.out.println("Starting to group sentences...");
         List<String> outputLines = new ArrayList<>();
 
         HashMap<LinkedList<String>, ArrayList<SentenceIndex>> sentenceToIndicesMap = new HashMap<>();
@@ -74,6 +75,7 @@ public class HashMapGroupingAlgorithm implements GroupingAlgorithm {
 
         getFormattedOutputLines(sentences, outputLines, sentenceToIndicesMap);
 
+        System.out.println("Sentences grouping successfully done!");
         return outputLines;
     }
 }

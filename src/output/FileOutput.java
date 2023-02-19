@@ -10,12 +10,13 @@ import java.util.List;
 public class FileOutput implements Output {
     @Override
     public void write(List<String> lines) throws IOException {
+        System.out.println("Starting to do file output...");
         final FileWriter writer = new FileWriter(Config.OUTPUT_FILE_PATH);
         final BufferedWriter buffer = new BufferedWriter(writer);
         for (String line : lines) {
             buffer.write(line + "\n");
         }
         buffer.close();
-        System.out.println("Success");
+        System.out.println("Successfully written to file output.");
     }
 }

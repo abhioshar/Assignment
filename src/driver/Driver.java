@@ -8,10 +8,8 @@ import service.ProcessingService;
 import util.GroupingAlgorithm;
 import util.HashMapGroupingAlgorithm;
 
-import java.io.IOException;
-
 public class Driver {
-    public static void beginProgramExecution() throws IOException {
+    public static void beginProgramExecution() {
         Input input = new FileInput();
         GroupingAlgorithm groupingAlgorithm = new HashMapGroupingAlgorithm();
         Output output = new FileOutput();

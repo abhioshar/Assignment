@@ -6,12 +6,12 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class FileInput implements Input {
     @Override
     public List<List<String>> getInput() throws IOException {
+        System.out.println("Starting to get file input...");
         final List<List<String>> sentences = new ArrayList<>();
 
         final String inputFile = Config.INPUT_FILE_PATH;
@@ -24,6 +24,8 @@ public class FileInput implements Input {
             currentLine = reader.readLine();
         }
         reader.close();
+
+        System.out.println("File input successfully fetched.");
         return sentences;
     }
 }
