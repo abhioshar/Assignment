@@ -24,7 +24,9 @@ two
 values.
 
 First value of the pair: the index of the mapped line
-in the file. Second: the index of word omitted from he line.
+in the file.
+
+Second: the index of word omitted from the line.
 
 
 Eg: a line from file
@@ -32,7 +34,7 @@ Eg: a line from file
 *01-01-2012 19:45:00 Naomi is getting into the car*
 
 We generate a linked list from a given sentence omitting a single word. Why linked list? Because
-it has contant insertion/deletion time for an entry which will help us later when we remove a
+it has constant insertion/deletion time for an entry which will help us later when we remove a
 word at a time from a line to generate key for a hashmap.
 
 Eg. for example for above line from file would generate six hashmap entries
@@ -40,7 +42,7 @@ Eg. for example for above line from file would generate six hashmap entries
 Map:
 1. is getting into the car (omitting 1st word)
 2. Naomi getting into the car (omitting 2nd word)
-3. ... so on... for all the lines
+3. ... so on...
 
 Each key in the hashmap, maps to list of {lineIndex, wordIndexInLine} pair.
 
@@ -69,7 +71,8 @@ required from the map value viz. line index and the word changed.
 
 ## How to run?
 
-1. It's a Java project created on Intellij Idea. It can be directly imported.
+1. It's a Java project created on Intellij Idea. It can be directly imported. No external 
+   dependencies are required.
 
 2. I've added sample input and output files, so they can be used directly. These are in */files*
    directory in root.
@@ -86,10 +89,10 @@ required from the map value viz. line index and the word changed.
     
     W: Maximum no. of words in a line
     
-    HashMap: Each entry in map takes O(1) amortized time to search/update etc where N are number of 
-    entries in the map. Here I'm using list as the key of the hashmap, hence, complexity will
-    become O(1) * (time taken by hashmap to generate hash for the the key, which here is O(no. of 
-    words in a line(W))) as each key in hashmap has list of O(W) words.
+    HashMap: Each entry in map takes O(1) amortized time to search/update etc. where N are 
+    number of entries in the map. Here I'm using list as the key of the hashmap, hence, complexity 
+    will become O(1) * (time taken by hashmap to generate hash for the the key, which here is O
+    (no. of words in a line(W))) as each key in hashmap has list of O(W) words.
     
     Total complexity: N * W * W
 
@@ -112,7 +115,7 @@ required from the map value viz. line index and the word changed.
 
     2.2 Space wise, algorithm will scale same as above point as both complexities are the same.
 
-    2.3 Current algorithm preserves order of the sentences. If that is not required, we can just 
+    2.3 Current algorithm works on HashMap based approach. If that is not required, we can just 
     create a new strategy for grouping algorithm and use it in our program. Existing code remains 
     closed for modification and open for extension in this way.
 
