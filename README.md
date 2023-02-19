@@ -12,7 +12,7 @@ Open/Closed principles.
 
 Class Flow is:
 
-#### Class Diagram ![Class Diagram](classDiagrams/ClassDiagram.png?raw=true)
+#### Class Diagram ![Class Diagram](classDiagrams/ClassDiagramImage.png?raw=true)
 ####
 
 #### Main method -> Driver -> ProcessingService -> Input -> ProcessingService -> GroupingAlgorithm -> ProcessingService -> Output ####
