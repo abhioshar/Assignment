@@ -138,14 +138,16 @@ required from the map value viz. line index and the word changed.
 
     3.2 Adding Unit test cases.
 
-    3.3 Adding better Exception Handling.
+    3.3 Add documentation/Java Doc.
 
-    3.4 Use Test Driven Development.
+    3.4 Adding better Exception Handling.
 
-    3.5 Add better logging.
+    3.5 Use Test Driven Development.
 
-    3.6 Add support for multiple files.
+    3.6 Add better logging.
 
-    3.7 Add multiple input/output sources.
+    3.7 Add support for multiple files.
 
-    3.8 Try to deploy the application to the cloud and add REST APIs for the functionalities
+    3.8 Add multiple input/output sources.
+
+    3.9 Try to deploy the application to the cloud and add REST APIs for the functionalities
