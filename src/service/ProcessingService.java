@@ -8,6 +8,12 @@ import java.io.IOException;
 import java.util.List;
 
 public class ProcessingService {
+    /**
+     * Service which integrates input, output and the matching algorithm
+     * @param input Input type, e.g. FileInput
+     * @param groupingAlgorithm Grouping Algorithm, e.g. HashMap based algorithm
+     * @param output Output type, eg. FileOutput
+     */
     public static void generateMatchingSentences(Input input,
                                                  GroupingAlgorithm groupingAlgorithm,
                                                  Output output) {
