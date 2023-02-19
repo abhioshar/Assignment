@@ -69,13 +69,7 @@ required from the map value viz. line index and the word changed.
 
 ## How to run?
 
-1. It's a CMAKE C++ project created on Windows. I've used CLion IDE to make it. It can be directly
-   imported
-   on CLion.
-   However, any IDE with C++ and CMake support will be able to open it. Make sure to install C++
-   compiler
-   as well eg. MinGW on Windows. No extra setup/libraries required as only language built-in
-   features have been used.
+1. It's a Java project created on Intellij Idea. It can be directly imported.
 
 2. I've added sample input and output files, so they can be used directly. These are in */files*
    directory in root.
