@@ -3,5 +3,5 @@ package util;
 import java.util.List;
 
 public interface GroupingAlgorithm {
-    List<String> groupSentences(List<List<String>> sentences);
+    List<String> groupSentences(final List<List<String>> sentences);
 }

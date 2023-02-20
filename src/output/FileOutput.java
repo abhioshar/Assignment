@@ -13,7 +13,7 @@ public class FileOutput implements Output {
         System.out.println("Starting to do file output...");
         final FileWriter writer = new FileWriter(Config.OUTPUT_FILE_PATH);
         final BufferedWriter buffer = new BufferedWriter(writer);
-        for (String line : lines) {
+        for (final String line : lines) {
             buffer.write(line + "\n");
         }
         buffer.close();

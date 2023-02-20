@@ -7,18 +7,18 @@ import static config.Config.OUTPUT_LINE_PREFIX;
 public class HashMapGroupingAlgorithm implements GroupingAlgorithm {
     private static void getFormattedOutputLines(List<List<String>> sentences, List<String> outputLines, HashMap<LinkedList<String>, ArrayList<SentenceIndex>> sentenceToIndicesMap) {
         for (Map.Entry<LinkedList<String>, ArrayList<SentenceIndex>> hashedItem : sentenceToIndicesMap.entrySet()) {
-            StringBuilder changingLine = new StringBuilder(OUTPUT_LINE_PREFIX);
+            final StringBuilder changingLine = new StringBuilder(OUTPUT_LINE_PREFIX);
 
             // If no other sentence matches this one, ignore it
             if (hashedItem.getValue().size() <= 1) continue;
 
-            for (SentenceIndex sentenceIndex : hashedItem.getValue()) {
+            for (final SentenceIndex sentenceIndex : hashedItem.getValue()) {
                 StringBuilder outputLine = new StringBuilder();
 
-                int sIndex = sentenceIndex.sentenceIndex;
-                int wIndex = sentenceIndex.wordOfSentenceIndex;
+                final int sIndex = sentenceIndex.sentenceIndex;
+                final int wIndex = sentenceIndex.wordOfSentenceIndex;
 
-                for (String word : sentences.get(sIndex)) {
+                for (final String word : sentences.get(sIndex)) {
                     outputLine.append(word).append(" ");
                 }
 
@@ -51,22 +51,23 @@ public class HashMapGroupingAlgorithm implements GroupingAlgorithm {
     }
 
     @Override
-    public List<String> groupSentences(List<List<String>> sentences) {
+    public List<String> groupSentences(final List<List<String>> sentences) {
         System.out.println("Starting to group sentences...");
-        List<String> outputLines = new ArrayList<>();
+        final ArrayList<String> outputLines = new ArrayList<>();
 
-        HashMap<LinkedList<String>, ArrayList<SentenceIndex>> sentenceToIndicesMap = new HashMap<>();
+        final HashMap<LinkedList<String>, ArrayList<SentenceIndex>> sentenceToIndicesMap =
+                new HashMap<>();
 
         for (int i = 0; i < sentences.size(); ++i) {
-            List<String> line = sentences.get(i);
-            LinkedList<String> listOfWords = getLowerCasedWords(line);
+            final List<String> line = sentences.get(i);
+            final LinkedList<String> listOfWords = getLowerCasedWords(line);
             filterWords(listOfWords);
 
-            ListIterator<String> listIterator = listOfWords.listIterator();
+            final ListIterator<String> listIterator = listOfWords.listIterator();
 
             // Try removing each word one at a time and adding the sentence to hashmap
             for (int j = 0; j < listOfWords.size(); ++j) {
-                String currWord = listIterator.next();
+                final String currWord = listIterator.next();
                 listIterator.remove();
                 addSentenceToHashmap(sentenceToIndicesMap, i, listOfWords, j);
                 listIterator.add(currWord);

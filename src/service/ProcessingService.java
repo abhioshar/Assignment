@@ -14,9 +14,9 @@ public class ProcessingService {
      * @param groupingAlgorithm Grouping Algorithm, e.g. HashMap based algorithm
      * @param output Output type, eg. FileOutput
      */
-    public static void generateMatchingSentences(Input input,
-                                                 GroupingAlgorithm groupingAlgorithm,
-                                                 Output output) {
+    public static void generateMatchingSentences(final Input input,
+                                                 final GroupingAlgorithm groupingAlgorithm,
+                                                 final Output output) {
         try {
             final List<List<String>> inputSentences = input.getInput();
             final List<String> outputLines = groupingAlgorithm.groupSentences(inputSentences);
