@@ -9,6 +9,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FileInput implements Input {
+    /**
+     * Get input from File
+     *
+     * @return List of sentences ordered by words in each sentence
+     * @throws IOException If file opening has exception
+     */
     @Override
     public List<List<String>> getInput() throws IOException {
         System.out.println("Starting to get file input...");

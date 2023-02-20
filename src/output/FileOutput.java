@@ -8,6 +8,12 @@ import java.io.IOException;
 import java.util.List;
 
 public class FileOutput implements Output {
+    /**
+     * Method to write output to a file
+     *
+     * @param lines List of lines to be written
+     * @throws IOException If file handling has exception
+     */
     @Override
     public void write(List<String> lines) throws IOException {
         System.out.println("Starting to do file output...");
