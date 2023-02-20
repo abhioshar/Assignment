@@ -17,6 +17,11 @@ Class Flow is:
 
 #### Main method -> Driver -> ProcessingService -> Input -> ProcessingService -> GroupingAlgorithm -> ProcessingService -> Output ####
 
+#### Code is inside /src directory ####
+#### Files are inside /files directory ####
+#### Class diagram is inside /classDiagram directory ####
+
+
 #### Algorithm ####
 The solution uses hashmap based approach for solving.
 Hashmap has sentence as the key(omitting a single word at a time) which maps to a vector of pair of
