@@ -19,7 +19,7 @@ Class Flow is:
 
 #### Code is inside /src directory ####
 #### Files are inside /files directory ####
-#### Class diagram is inside /classDiagram directory ####
+#### Class diagram is inside /classDiagrams directory ####
 
 
 #### Algorithm ####
